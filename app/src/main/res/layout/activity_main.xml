@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/baseline_menu_36"/>
+
+        <TextView
+            android:id="@+id/you_send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/you_send_tv"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <EditText
+            android:id="@+id/you_send_et"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="0.00"
+            tools:text="200.00"
+            android:inputType="numberDecimal"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/you_send_tv"
+            app:layout_constraintTop_toBottomOf="@+id/you_send_tv" />
+
+        <!--    <androidx.appcompat.widget.AppCompatSpinner-->
+        <!--        android:id="@+id/you_send_spinner"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:pointerIcon="arrow"-->
+
+        <!--        android:spinnerMode="dialog"-->
+        <!--        tools:layout_editor_absoluteX="274dp"-->
+        <!--        tools:layout_editor_absoluteY="137dp" />-->
+
+        <Button
+            android:id="@+id/you_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_down_arrow"
+            android:text="RUB"
+            android:textColor="#635AEA"
+            android:textSize="20sp"
+            android:layout_marginStart="34dp"
+            android:drawablePadding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/you_send_et"
+            app:layout_constraintStart_toEndOf="@+id/you_send_et"
+            app:layout_constraintTop_toTopOf="@+id/you_send_et" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="14dp"
+            android:background="@null"
+            android:src="@drawable/ic_exchangebutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/you_send_et"
+            app:tint="#635AEA"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/they_get_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="You get"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="@+id/you_send_et"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/they_get_et"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            style="@style/Widget.AppCompat.EditText"
+            android:backgroundTint="@color/black"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="0.00"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/they_get_tv"
+            app:layout_constraintTop_toBottomOf="@+id/they_get_tv" />
+
+        <Button
+            android:id="@+id/they_get_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_down_arrow"
+            android:drawableTint="?attr/colorPrimary"
+            android:layout_marginStart="34dp"
+            android:drawablePadding="6dp"
+            tools:text="EUR"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/they_get_et"
+            app:layout_constraintStart_toEndOf="@+id/they_get_et"
+            app:layout_constraintTop_toTopOf="@+id/they_get_et" />
+
+        <!--    <androidx.appcompat.widget.AppCompatSpinner-->
+        <!--        android:id="@+id/they_get_spinner"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="34dp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="@+id/they_get_et"-->
+        <!--        app:layout_constraintStart_toEndOf="@+id/they_get_et"-->
+        <!--        app:layout_constraintTop_toTopOf="@+id/they_get_et" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start" />
+</androidx.drawerlayout.widget.DrawerLayout>
