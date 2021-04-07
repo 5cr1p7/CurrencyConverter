@@ -1,7 +1,7 @@
 package com.ramilkapev.currencyconverter
 
 import android.app.Application
-import com.ramilkapev.currencyconverter.service.repository.WebApi
+import com.ramilkapev.currencyconverter.data.repository.WebApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -34,7 +34,7 @@ class ConverterApp: Application() {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
-//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

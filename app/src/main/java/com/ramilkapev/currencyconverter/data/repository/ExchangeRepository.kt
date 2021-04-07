@@ -1,13 +1,13 @@
-package com.ramilkapev.currencyconverter.service.repository
+package com.ramilkapev.currencyconverter.data.repository
 
 import androidx.lifecycle.LiveData
-import com.ramilkapev.currencyconverter.ExchangeDao
 import com.ramilkapev.currencyconverter.ExchangeRates
+import com.ramilkapev.currencyconverter.data.ExchangeDao
 
 class ExchangeRepository(private val exchangeDao: ExchangeDao) {
     private val webApi: WebApi = TODO()
 
-    val allRates: LiveData<ExchangeRates> = exchangeDao.getRates()
+//    val allRates: LiveData<ExchangeRates> = exchangeDao.getRates()
 
 //    fun fetchRates() = webApi.getRates()
 

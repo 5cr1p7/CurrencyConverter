@@ -1,4 +1,4 @@
-package com.ramilkapev.currencyconverter
+package com.ramilkapev.currencyconverter.utils
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
@@ -13,7 +13,7 @@ object MapDoubleConverter {
     }
     @TypeConverter
     @JvmStatic
-    fun mapToDouble(value: Map<String, Double>?): Double {
-        return if(value == null) 0.0 else Gson().toJson(value).toDouble()
+    fun mapToDouble(value: Map<String, Double>): Array<Double> {
+        return value.values.toTypedArray()
     }
 }

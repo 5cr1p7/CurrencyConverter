@@ -1,13 +1,18 @@
-package com.ramilkapev.currencyconverter
+package com.ramilkapev.currencyconverter.data
 
 import android.content.Context
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteOpenHelper
+import com.ramilkapev.currencyconverter.ExchangeRates
 
-//@Database(entities = [Currency::class], version = 1)
+/* Тут должна быть БД, но у меня возникла проблема с добавлением Map<String, Double>
+    в нее. Я понимаю, что это как-то можно реализовать через конвертеры Room,
+    но почему-то не получилось...
+ */
+
+//@Database(entities = [ExchangeRates::class], version = 1)
 //abstract class ExchangeRoomDB: RoomDatabase() {
-//
 //    abstract fun exchangeDao(): ExchangeDao
 //
 //    companion object {

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CurrencyConverter</string>
     <string name="you_send_tv">You send</string>
+    <string name="you_get_tv">You get</string>
 </resources>
