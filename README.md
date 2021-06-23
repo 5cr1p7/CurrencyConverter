@@ -9,4 +9,4 @@ Used libraries:
 - ViewModel
 - LiveData
 
-![dark_image](/Images/main_screen_dark.png)
+![dark_image](/Images/main_screen_dark.png) ![dark_image](/Images/main_screen_light.png) ![dark_image](/Images/currency_select_dialog.png)
