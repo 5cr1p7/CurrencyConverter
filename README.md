@@ -8,3 +8,5 @@ Used libraries:
 - Room
 - ViewModel
 - LiveData
+
+![dark_image](/images/main_screen_dark.png)
